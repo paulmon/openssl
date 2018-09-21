@@ -6,7 +6,7 @@
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
  */
-
+#ifndef _ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE
 #if (defined(_WIN64) || defined(_WIN32_WCE)) && !defined(UNICODE)
 # define UNICODE
 #endif
@@ -125,6 +125,8 @@ void *OPENSSL_UplinkTable[] = {
     lazy16, lazy17, lazy18, lazy19, lazy20,
     lazy21, lazy22, lazy23, lazy24, lazy25,
 };
+#else
+void *OPENSSL_UplinkTable[26] = {0};
 #endif
 
 #ifdef SELFTEST
@@ -133,3 +135,5 @@ main()
     UP_fprintf(UP_stdout, "hello, world!\n");
 }
 #endif
+
+#endif // _ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE

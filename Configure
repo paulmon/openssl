@@ -289,6 +289,9 @@ if (defined $ENV{$local_config_envname}) {
 
 
 print "Configuring OpenSSL version $config{version} ($config{version_num})\n";
+print "Platform=$ENV{'Platform'}\n";
+my $eq = ($ENV{'Platform'} eq 'arm');
+print "eq=$eq\n";
 
 $config{prefix}="";
 $config{openssldir}="";

@@ -7,6 +7,8 @@
  * https://www.openssl.org/source/license.html
  */
 
+#ifndef _ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE
+
 #define APPLINK_STDIN   1
 #define APPLINK_STDOUT  2
 #define APPLINK_STDERR  3
@@ -136,3 +138,5 @@ OPENSSL_Applink(void)
 }
 #endif
 #endif
+
+#endif // _ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE
