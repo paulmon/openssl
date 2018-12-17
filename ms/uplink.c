@@ -125,6 +125,8 @@ void *OPENSSL_UplinkTable[] = {
     lazy16, lazy17, lazy18, lazy19, lazy20,
     lazy21, lazy22, lazy23, lazy24, lazy25,
 };
+#elif defined(_M_ARM)
+void *OPENSSL_UplinkTable[26] = {0};
 #endif
 
 #ifdef SELFTEST
